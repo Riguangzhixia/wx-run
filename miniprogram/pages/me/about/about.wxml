@@ -1,0 +1,16 @@
+<view class='container'>
+  <image class='img' src='../../images/run.jpg'></image>
+  <view class='info'>
+    <text>版本号:</text>
+    <view class='content'>1.0.0</view>
+  </view>
+  <view class='info'>
+    <text>联系方式:</text>
+    <view class='content'>QQ:</view>
+  </view>
+  <view class='info'>
+    <text>更新日期:</text>
+    <view class='content'>2019.4.16</view>
+  </view>
+</view>
+<view style='bottom:0;width:100%;text-align:center;color:#c2b9b9;font-size:35rpx;'>定位接口由微信提供</view>

@@ -1,0 +1,33 @@
+
+<view class='allin'>
+  <view class="container">
+
+    <!-- 用户 openid -->
+    <view class="userinfo">
+      <button 
+        open-type="getUserInfo" 
+        bindgetuserinfo="onGetUserInfo"
+        bindtap="onGetOpenid"
+        class="userinfo-avatar"
+        style="background-image: url({{avatarUrl}})"
+      ></button>
+      <view>
+        <text class="userinfo-nickname" >{{userInfo.nickName}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='nav'>
+    <navigator url="help/help" class='block'>
+      <text>帮助中心</text>
+      <text class='right'>></text>
+    </navigator>
+    <navigator url='change/change' class='block'>
+      <text>修改个人信息</text>
+      <text class='right'>></text>
+    </navigator>
+    <navigator url='about/about' class='block'>
+      <text>关于</text>
+      <text class='right'>></text>
+    </navigator>
+  </view>
+</view>

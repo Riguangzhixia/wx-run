@@ -1,0 +1,19 @@
+  <view class='body' wx-if="{{flag && flag != null}}" style='margin:150rpx auto;'>
+    <view class='info'>填写并重新上传即可修改对应学号姓名，打卡记录保留~</view>
+    <form bindsubmit="formSubmit">
+      <view class='usermotto'>
+        <view class="uploader">
+          <text>学号：  </text>
+          <input type="number" name="number" maxlength="11" />
+        </view>  
+        <view class="uploader">
+          <text>姓名：  </text>
+          <input name="name"  />
+        </view>   
+        <view class='button'>
+          <button class="register" type='primary'  form-type='submit'>提交修改</button>
+        </view>
+      </view>
+    </form>
+  </view>
+  <view wx-if="{{!flag && flag != null}}" style="text-align:center;margin:50rpx auto;color:grey;font-size:50rpx;">未查询到用户信息，请先提交</view>

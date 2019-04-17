@@ -1,0 +1,51 @@
+<!--index.wxml-->
+
+  <!--pages/index/Login.wxml-->
+<!-- 登录页面 -->
+<view wx-if="{{flag != null}}">
+
+  <view class='body' wx-if="{{!flag && flag != null}}">
+    <form bindsubmit="formSubmit">
+      <view class='usermotto'>
+        <view class="uploader">
+          <text>学号：  </text>
+          <input bindblur="onGetAccount" type="number" name="number" maxlength="11" />
+        </view>  
+        <view class="uploader">
+          <text>姓名：  </text>
+          <input bindblur="onGetPassword" name="name"  />
+        </view>   
+        <view class='button'>
+          <button class="register" type='primary'  form-type='submit'>绑定</button>
+        </view>
+      </view>
+    </form>
+    <view class="container">
+
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      bindtap="onGetOpenid"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <view>
+      <text class="userinfo-nickname" >{{userInfo.nickName}}</text>
+    </view>
+  </view>
+</view>
+  </view> 
+  <view wx-if="{{flag}}" class='cardinfo'>
+    <image class='bgimg' src='../images/background.jpg'></image>
+    <view class='card'>
+      <text>本学期已经打卡：{{days}}天</text>
+      <navigator class='nav' url='../task/task' open-type='switchTab'>
+      <image class='cardimg' src='../images/icons/cardimg.jpg'>图片失效</image>
+      <text class="info">点击进入任务列表</text>
+      </navigator>
+    </view>
+  </view>
+</view>
+

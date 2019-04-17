@@ -1,0 +1,54 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/help/help",
+    "pages/me/change/change",
+    "pages/me/about/about",
+    "pages/me/me",
+    "pages/about/about",
+    "pages/task/task",
+    "pages/databaseGuide/databaseGuide"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#303133",
+    "navigationBarTitleText": "打卡",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "backgroundColor": "#303133",
+    "color": "#fff",
+    "selectedColor": "#F6F6F6",
+    "list": [
+      {
+        "iconPath": "pages/images/icons/3.png",
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "pages/images/icons/3s.png"
+      },
+      {
+        "iconPath": "pages/images/icons/2.png",
+        "pagePath": "pages/task/task",
+        "text": "任务列表",
+        "selectedIconPath": "pages/images/icons/2s.png"
+      },
+      {
+        "iconPath": "pages/images/icons/1.png",
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "selectedIconPath": "pages/images/icons/1s.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

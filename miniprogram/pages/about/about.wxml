@@ -1,0 +1,42 @@
+
+<view class='page'>
+  <view class="head" style="flex-direction:row;">
+      <view class='usermotto'>
+        <a bindtap="openLocation" class="lo">
+        <image style='width:100rpx;height: 100rpx;' class='icon' src='../images/icons/location.png'></image>
+        打开位置</a>
+      </view>
+
+      <view class='usermotto'>
+        <a bindtap="starRun" class='user-motto'>
+        <image style='width:100rpx;height: 100rpx;' class='icon' src='../images/icons/start.png'></image>
+        开始跑步</a>
+        <a bindtap="stopRun" class='user-motto'>
+        <image style='width:100rpx;height: 100rpx;' class='icon' src='../images/icons/end.png'></image>
+        暂停跑步</a>
+      </view>
+
+      <text class='result'>运动里程数：{{meters}}km</text>
+      <text class='result'>已运动时间：{{time}}</text>
+  </view>
+  <view class="mainView">
+    <map
+          class="mapView"
+          style="width: 100%; height: 375px;"
+          latitude="{{latitude}}"
+          longitude="{{longitude}}"
+          markers="{{markers}}"
+          covers="{{covers}}"
+          >
+      </map>
+  </view>
+  <view class='usermotto' wx-if="{{meters >= dis}}">
+  <a bindtap="card" class='user-motto'>
+      <image style='width:100rpx;height: 100rpx;' class='icon' src='../images/icons/card.png'></image>
+      打卡</a>
+  </view>
+  <view wx-if="{{meters < dis}}" style="text-align:center;">
+  时间或运动距离未到达要求~
+  </view>
+</view>
+

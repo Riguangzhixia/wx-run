@@ -1,0 +1,33 @@
+<view class='body'>
+  <view class='rule'>
+    <button style='border-radius: 100%;' bindtap='showrule'>打卡规则</button>
+  </view>
+
+  <view class='run'>
+    <text class='text'>800米</text>
+    <a class='run-b' data-dis="800" bindtap='go'>
+    <image src='../images/icons/run.png'></image>
+    开始跑步</a> 
+  </view>
+
+  <view class='run'>
+    <text class='text'>1000米</text>
+    <a class='run-b' data-dis="800" bindtap='go'>
+    <image src='../images/icons/run.png'></image>
+    开始跑步</a> 
+  </view>
+
+  <view class='run'>
+    <text class='text'>2000米</text>
+    <a class='run-b' data-dis="800" bindtap='go'>
+    <image src='../images/icons/run.png'></image>
+    开始跑步</a> 
+  </view>
+
+  <view class='run'>
+    <text class='text'>3000米</text>
+    <a class='run-b' data-dis="800" bindtap='go'>
+    <image src='../images/icons/run.png'></image>
+    开始跑步</a> 
+  </view>
+</view>

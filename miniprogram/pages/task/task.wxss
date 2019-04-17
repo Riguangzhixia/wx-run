@@ -1,0 +1,39 @@
+/* miniprogram/pages/task/task.wxss */
+.body{
+  display: flex;
+  flex-direction: column;
+  align-items:center; 
+}
+.rule{
+  margin-top: 20rpx;
+  width:250rpx;
+  text-align: right;
+}
+.run{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 80%  ;
+  height: 150rpx;
+  background-color: ghostwhite;
+  margin:40rpx 0;
+  border-radius: 10%;
+}
+.text{
+  width:65%;
+  text-align: center; 
+}
+.run-b image{
+  width: 50%;
+  height: 60%;
+}
+.run-b{
+    height:150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 35rpx;
+    background-color: rgba(226, 226, 221, 0.986);
+    width:35%;
+    border-radius: 10%;
+    }

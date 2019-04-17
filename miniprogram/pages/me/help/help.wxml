@@ -1,0 +1,17 @@
+  <view class='nav'>
+  <view style='margin:80rpx;'>问题及解决方案：</view>
+    <view class='block'>
+      <text>问题：打卡规则</text>
+      <view class='content'>请查看任务列表页面顶部</view>
+    </view>
+    <view class='block'>
+      <text>问题：学生信息绑定错误</text>
+      <view class='content'>可点击修改个人信息修改并重新提交</view>
+    </view>
+    <view class='block'>
+      <text>问题：历史打卡记录出错</text>
+      <view class='content'>请联系管理人员</view>
+    </view>
+
+    <view ></view>
+  </view>

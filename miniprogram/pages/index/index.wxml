@@ -3,7 +3,6 @@
   <!--pages/index/Login.wxml-->
 <!-- 登录页面 -->
 <view wx-if="{{flag != null}}">
-
   <view class='body' wx-if="{{!flag && flag != null}}">
     <form bindsubmit="formSubmit">
       <view class='usermotto'>
@@ -37,8 +36,10 @@
   </view>
 </view>
   </view> 
+  <view class='calender'>
+    <calendar calendar="{{calendar}}" gesture="{{gesture}}"></calendar>
+  </view>
   <view wx-if="{{flag}}" class='cardinfo'>
-    <image class='bgimg' src='../images/background.jpg'></image>
     <view class='card'>
       <text>本学期已经打卡：{{days}}天</text>
       <navigator class='nav' url='../task/task' open-type='switchTab'>

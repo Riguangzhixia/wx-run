@@ -1,4 +1,6 @@
-<view class='body'>
+<image class='bgimg' src='../images/bg2.jpg'></image>
+
+<view class='body' wx-if="{{dis != 0}}">
   <view class='rule'>
     <button style='border-radius: 100%;' bindtap='showrule'>打卡规则</button>
   </view>
@@ -12,21 +14,21 @@
 
   <view class='run'>
     <text class='text'>1000米</text>
-    <a class='run-b' data-dis="800" bindtap='go'>
+    <a class='run-b' data-dis="1000" bindtap='go'>
     <image src='../images/icons/run.png'></image>
     开始跑步</a> 
   </view>
 
   <view class='run'>
     <text class='text'>2000米</text>
-    <a class='run-b' data-dis="800" bindtap='go'>
+    <a class='run-b' data-dis="2000" bindtap='go'>
     <image src='../images/icons/run.png'></image>
     开始跑步</a> 
   </view>
 
   <view class='run'>
     <text class='text'>3000米</text>
-    <a class='run-b' data-dis="800" bindtap='go'>
+    <a class='run-b' data-dis="3000" bindtap='go'>
     <image src='../images/icons/run.png'></image>
     开始跑步</a> 
   </view>

@@ -1,8 +1,18 @@
 /* miniprogram/pages/task/task.wxss */
+
 .body{
   display: flex;
   flex-direction: column;
   align-items:center; 
+}
+.bgimg{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
 }
 .rule{
   margin-top: 20rpx;
@@ -18,6 +28,7 @@
   background-color: ghostwhite;
   margin:40rpx 0;
   border-radius: 10%;
+  box-shadow: 0px 4px 4px #c2b9b9 ;
 }
 .text{
   width:65%;

@@ -1,4 +1,7 @@
-
+const app = getApp()
+const fullyear = new Date().getFullYear();
+const fullmonth = new Date().getMonth() + 1;
+const fullday = new Date().getDate();
 var countTooGetLocation = 0;
 var total_micro_second = 0;
 var starRun = 0;
@@ -78,19 +81,52 @@ Page({
     covers: [],
     meters: 0.00,
     time: "0:00:00",
-    dis: -1,
+    dis: 0,
   },
   card:function(){
+    wx.cloud.init();
     //完成任务并打卡，向服务器对应的学号存入打卡记录
+
+    const db = wx.cloud.database();
+    const _ = db.command;
+    db.collection('student').where({
+      _openid: app.globalData.openid
+    }).get({
+      success: res => {
+        var list = res.data[0].data
+        var flag = list.some(function(time){
+          return time.year == fullyear && time.month == fullmonth && time.day == fullday
+        })
+        if(flag == true){
+          wx.showModal({
+            title: '重复打卡',
+            content: '今天已经打卡成功~',
+          })
+        }
+        else{
+        db.collection('student').doc(res.data[0]._id).update({
+          data: {
+            data: _.push([{ year: fullyear, month: fullmonth, day: fullday }]),
+            sum: _.inc(1),
+          },
+          complete: function (res) {
+            // complete
+          }
+        })
+        }
+      }
+    })
   },
   //****************************
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
     this.setData({
-      dis:-1//options.dis/1000
+      dis:options.dis
     })
     this.getLocation()
     console.log(this.data.dis)
+    wx.setNavigationBarTitle({ title: '打卡任务：' + options.dis + 'm' })
+
     count_down(this);
   },
   //****************************

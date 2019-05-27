@@ -7,7 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    
   },
 
   /**
@@ -32,9 +32,10 @@ Page({
     })
   },
 go:function(e){
-  
+  console.log(e.currentTarget.dataset.dis)
+
   wx.navigateTo({
-    url: '/pages/about/about?dis='+e.target.dataset.dis
+    url: '/pages/about/about?dis=' + e.currentTarget.dataset.dis
   })
 },
   /**
@@ -48,7 +49,9 @@ go:function(e){
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.setData({
+      dis: 100
+    })
   },
 
   /**
